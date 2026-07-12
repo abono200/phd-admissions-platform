@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 230 25% 6%;
+  --foreground: 220 20% 96%;
+  
+  --card: 228 20% 9%;
+  --card-foreground: 220 20% 96%;
+  
+  --popover: 230 25% 6%;
+  --popover-foreground: 220 20% 96%;
+  
+  --primary: 250 85% 65%;
+  --primary-foreground: 210 20% 98%;
+  
+  --secondary: 190 90% 45%;
+  --secondary-foreground: 220 20% 96%;
+  
+  --muted: 228 15% 15%;
+  --muted-foreground: 220 10% 65%;
+  
+  --accent: 260 80% 55%;
+  --accent-foreground: 220 20% 96%;
+  
+  --destructive: 350 80% 55%;
+  --destructive-foreground: 220 20% 96%;
+  
+  --border: 228 15% 16%;
+  --input: 228 15% 14%;
+  --ring: 250 85% 65%;
+  
+  --radius: 0.85rem;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(13, 15, 23, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: rgba(20, 23, 35, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(25, 29, 45, 0.6);
+  border-color: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 10px 30px -15px rgba(124, 58, 237, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Glow effects */
+.glow-primary {
+  box-shadow: 0 0 40px -10px rgba(124, 58, 237, 0.3);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 40px -10px rgba(6, 182, 212, 0.3);
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}

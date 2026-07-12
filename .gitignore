@@ -1,0 +1,13 @@
+# Local Node & Build folders
+platform/node_modules/
+platform/dist/
+platform/tmp/
+platform/.vite/
+
+# System / OS files
+.DS_Store
+Thumbs.db
+
+# Gemini Agent configs (if any)
+.gemini/
+.agents/
